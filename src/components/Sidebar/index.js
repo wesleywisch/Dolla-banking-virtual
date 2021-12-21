@@ -11,19 +11,19 @@ import {
   SidebarRoute,
 } from './styles';
 
-export function Sidebar() {
+export function Sidebar({ isOpen, toggle }) {
   return (
-    <SidebarContainer>
-      <Icon>
+    <SidebarContainer isOpen={isOpen}>
+      <Icon onClick={toggle}>
         <CloseIcon />
       </Icon>
 
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="about">About</SidebarLink>
-          <SidebarLink to="discover">Discover</SidebarLink>
-          <SidebarLink to="services">Services</SidebarLink>
-          <SidebarLink to="signup">Sign Up</SidebarLink>
+          <SidebarLink to="about" onClick={toggle}>About</SidebarLink>
+          <SidebarLink to="discover" onClick={toggle}>Discover</SidebarLink>
+          <SidebarLink to="services" onClick={toggle}>Services</SidebarLink>
+          <SidebarLink to="signup" onClick={toggle}>Sign Up</SidebarLink>
         </SidebarMenu>
 
         <SideBtnWrap>

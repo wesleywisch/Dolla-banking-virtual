@@ -14,13 +14,13 @@ import {
   NavBtnLink,
 } from './styles';
 
-export function Navbar() {
+export function Navbar({ toggle }) {
   return (
     <Nav>
       <NavbarContainer>
         <NavLogo to="/">dolla</NavLogo>
 
-        <MobileIcon>
+        <MobileIcon onClick={toggle}>
           <FaBars />
         </MobileIcon>
 

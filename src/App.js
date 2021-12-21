@@ -3,14 +3,12 @@ import './App.css';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { Sidebar } from "./components/Sidebar";
-import { Navbar } from './components/Navbar';
+import { Home } from "./pages/Home";
 
 export function App() {
   return (
     <Router>
-      <Sidebar />
-      <Navbar />
+      <Home />
     </Router>
   );
 }
