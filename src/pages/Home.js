@@ -3,6 +3,9 @@ import React, { useState } from "react";
 import { Navbar } from '../components/Navbar';
 import { Sidebar } from '../components/Sidebar';
 import { HeroSection } from "../components/HeroSection";
+import { InfoSection } from "../components/InfoSection";
+
+import { infoSectionOne, infoSectionTwo, infoSectionThree } from "../data/data";
 
 export function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +19,9 @@ export function Home() {
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <HeroSection />
+      <InfoSection {...infoSectionOne} />
+      <InfoSection {...infoSectionTwo} />
+      <InfoSection {...infoSectionThree} />
     </>
   );
 }
