@@ -4,6 +4,7 @@ import { Navbar } from '../components/Navbar';
 import { Sidebar } from '../components/Sidebar';
 import { HeroSection } from "../components/HeroSection";
 import { InfoSection } from "../components/InfoSection";
+import { Services } from "../components/Services";
 
 import { infoSectionOne, infoSectionTwo, infoSectionThree } from "../data/data";
 
@@ -21,6 +22,7 @@ export function Home() {
       <HeroSection />
       <InfoSection {...infoSectionOne} />
       <InfoSection {...infoSectionTwo} />
+      <Services />
       <InfoSection {...infoSectionThree} />
     </>
   );
