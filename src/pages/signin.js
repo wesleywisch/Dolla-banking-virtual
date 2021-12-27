@@ -1,7 +1,9 @@
 import React from "react";
 
-export function SigninPage() {
+import { SignIn } from "../components/SignIn";
+
+export function SignInPage() {
   return (
-    <h1>Signinpage</h1>
+    <SignIn />
   );
 }

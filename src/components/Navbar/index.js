@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import { animateScroll as scroll } from 'react-scroll';
+
 import { FaBars } from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
@@ -26,6 +28,10 @@ export function Navbar({ toggle }) {
     }
   }
 
+  function toggleHome() {
+    scroll.scrollToTop();
+  }
+
   useEffect(() => {
     window.addEventListener('scroll', changeNav);
   }, [])
@@ -34,7 +40,7 @@ export function Navbar({ toggle }) {
     <IconContext.Provider value={{ color: '#fff' }}>
       <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="/">dolla</NavLogo>
+          <NavLogo to="/" onClick={toggleHome}>dolla</NavLogo>
 
           <MobileIcon onClick={toggle}>
             <FaBars />
@@ -42,24 +48,74 @@ export function Navbar({ toggle }) {
 
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+                activeClass="active"
+              >
+                About
+              </NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavLinks to="discover">Discover</NavLinks>
+              <NavLinks
+                to="discover"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+                activeClass="active"
+              >
+                Discover
+              </NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavLinks to="services">Services</NavLinks>
+              <NavLinks
+                to="services"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+                activeClass="active"
+              >
+                Services
+              </NavLinks>
             </NavItem>
 
             <NavItem>
-              <NavLinks to="signup">Sign Up</NavLinks>
+              <NavLinks
+                to="signup"
+                smooth={true}
+                duration={500}
+                spy={true}
+                exact={true}
+                offset={-80}
+                activeClass="active"
+              >
+                Sign Up
+              </NavLinks>
             </NavItem>
           </NavMenu>
 
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink
+              to="/signin"
+              smooth={true}
+              duration={500}
+              spy={true}
+              exact={true}
+              offset={-80}
+              activeClass="active"
+            >
+              Sign In
+            </NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ServicesContainer = styled.div`
+export const ServicesContainer = styled.section`
   height: 800px;
   display: flex;
   flex-direction: column;
@@ -17,10 +17,11 @@ export const ServicesContainer = styled.div`
   }
 `;
 
-export const ServicesH1 = styled.h1`
+export const ServicesH1 = styled.p`
   font-size: 2.5rem;
   color: #fff;
   margin-bottom: 64px;
+  font-weight: bold;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
