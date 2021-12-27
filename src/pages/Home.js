@@ -5,6 +5,7 @@ import { Sidebar } from '../components/Sidebar';
 import { HeroSection } from "../components/HeroSection";
 import { InfoSection } from "../components/InfoSection";
 import { Services } from "../components/Services";
+import { Footer } from "../components/Footer";
 
 import { infoSectionOne, infoSectionTwo, infoSectionThree } from "../data/data";
 
@@ -24,6 +25,7 @@ export function Home() {
       <InfoSection {...infoSectionTwo} />
       <Services />
       <InfoSection {...infoSectionThree} />
+      <Footer />
     </>
   );
 }
